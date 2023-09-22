@@ -13,6 +13,8 @@ inputs:
 outputs:
   time:
     description: 'Your output description here'
+  tsup:
+    description: 'Your output description here'
 
 runs:
   using: node20
