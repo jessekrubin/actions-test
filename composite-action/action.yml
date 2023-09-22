@@ -1,0 +1,19 @@
+name: 'composite-action'
+description: 'composite action'
+author: 'jessekrubin'
+
+output:
+  something:
+    description: 'something'
+    value: ${{ steps.main.outputs.something }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 'main'
+      id: 'main'
+      shell: 'bash'
+      run: |
+        SOMETHING="something"
+        echo "something"
+        echo "something=$SOMETHING" >> $GITHUB_OUTPUT
