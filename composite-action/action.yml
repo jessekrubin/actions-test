@@ -5,13 +5,13 @@ author: 'jessekrubin'
 output:
   something:
     description: 'something'
-    value: ${{ steps.main.outputs.something }}
+    value: ${{ steps.uno.outputs.something }}
 
 runs:
   using: 'composite'
   steps:
-    - name: 'main'
-      id: 'main'
+    - name: 'uno'
+      id: 'uno'
       shell: 'bash'
       run: |
         SOMETHING="something"
