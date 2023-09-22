@@ -2269,6 +2269,7 @@ async function run() {
     await wait(parseInt(ms, 10));
     core.debug((/* @__PURE__ */ new Date()).toTimeString());
     core.setOutput("time", (/* @__PURE__ */ new Date()).toTimeString());
+    core.setOutput("tsup!", "true");
   } catch (error) {
     if (error instanceof Error)
       core.setFailed(error.message);
